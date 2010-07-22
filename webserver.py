@@ -26,9 +26,6 @@ class MyHandler(BaseHTTPRequestHandler):
                 'CONTENT_TYPE':self.headers['Content-Type'],
             })
 
-
-            print form.keys()
-
             self.send_response(301)
             self.end_headers()
             for field in form.keys():
