@@ -17,18 +17,26 @@ class MyHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         global rootnode
         try:
-            ctype, pdict = cgi.parse_header(self.headers.getheader('content-type'))
-            if ctype == 'multipart/form-data':
-                query=cgi.parse_multipart(self.rfile, pdict)
+            # http://blog.doughellmann.com/2007/12/pymotw-basehttpserver.html
+            # Parse the form data posted
+            form = cgi.FieldStorage(
+                fp=self.rfile,
+                headers=self.headers,
+                environ={'REQUEST_METHOD':'POST',
+                'CONTENT_TYPE':self.headers['Content-Type'],
+            })
+
+
+            print form.keys()
+
             self.send_response(301)
-
             self.end_headers()
-            upfilecontent = query.get('upfile')
-            print "filecontent", upfilecontent[0]
-            self.wfile.write("<HTML>POST OK.<BR><BR>");
-            self.wfile.write(upfilecontent[0]);
+            for field in form.keys():
+                print field + '=' + str(form[field].value)
 
-        except :
+        except Exception, e:
+            print e
+            print "Woah, we've gota derp."
             pass
 
 def main():
