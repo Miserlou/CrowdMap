@@ -1,0 +1,10 @@
+This is a combination of python http server code (which is quite shit) which takes
+data from the clients and puts it into an sqlite database.
+
+The other componant is an Android application which occasionally sends a single POST
+request to the server to supply with its environmental data.
+
+Contents of the supplied data will be used to create datasets and visualizations about
+how international telcos distribute their IP address space geospacially.
+
+More info: rich@anomos.info
