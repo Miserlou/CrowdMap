@@ -12,3 +12,7 @@ More info: rich@anomos.info
 Tuts used:
 http://stackoverflow.com/questions/3145089/what-is-the-simplest-and-most-robust-way-to-get-the-users-current-location-in-an/3145655#3145655
 http://blog.doughellmann.com/2007/12/pymotw-basehttpserver.html
+
+To test POST:
+curl -d provider=testing http://localhost:8888
+
