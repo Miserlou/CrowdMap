@@ -9,10 +9,13 @@ how international telcos distribute their IP address space geospacially.
 
 More info: rich@anomos.info
 
+SQLite Table Layout:
+ip, connection_type, carrier, location, location_type, time
+CREATE  TABLE "main"."points" ("ip" TEXT NOT NULL , "connection_type" TEXT NOT NULL , "carrier" TEXT NOT NULL , "location" TEXT NOT NULL , "location_type" TEXT NOT NULL , "time" TEXT NOT NULL )
+
 Tuts used:
 http://stackoverflow.com/questions/3145089/what-is-the-simplest-and-most-robust-way-to-get-the-users-current-location-in-an/3145655#3145655
 http://blog.doughellmann.com/2007/12/pymotw-basehttpserver.html
 
 To test POST:
-curl -d provider=testing http://localhost:8888
-
+curl -d ip=192.168.1.1 -d connection_type=3g -d carrier=tmo -d location=righthere -d location_type=gps -d time=11111111 http://localhost:8888

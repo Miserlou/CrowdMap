@@ -1,4 +1,5 @@
 import string,cgi,time
+import sqlite3
 from os import curdir, sep
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 
@@ -28,8 +29,22 @@ class MyHandler(BaseHTTPRequestHandler):
 
             self.send_response(301)
             self.end_headers()
+
+            point = {}
             for field in form.keys():
-                print field + '=' + str(form[field].value)
+                point[field] = str(form[field].value)
+
+            self.conn = sqlite3.connect('crowdmap.sqlite')
+            c = self.conn.cursor()
+            query = "insert into points values (?,?,?,?,?,?)"
+
+            c.execute(query, (point['ip'], point['connection_type'], point['carrier'],
+                point['location'], point['location_type'], point['time']))
+
+            self.conn.commit()
+            c.close()
+            print "Added to database: "
+            print point
 
         except Exception, e:
             print e
