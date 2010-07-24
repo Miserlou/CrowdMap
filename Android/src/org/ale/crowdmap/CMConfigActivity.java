@@ -39,7 +39,7 @@ public class CMConfigActivity extends Activity {
 			public void onItemSelected(AdapterView<?> arg0, View arg1,
 					int arg2, long arg3) {
 				// If it's "Other", enable the Other EditView
-				if(arg2 == 12){
+				if(arg2 == 17){
 					et.setEnabled(true);
 					et.setVisibility(0);
 				}
