@@ -9,6 +9,10 @@
         <item>NTT DoCoMo</item>
         <item>China Mobile</item>
         <item>Vodaphone</item>
+        <item>O2</item>
+        <item>Base</item>
+        <item>ePlus</item>
+        <item>Phonehouse</item>
         <item>Other</item>
     </string-array>
     
