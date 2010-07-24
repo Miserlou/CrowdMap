@@ -4,6 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/bluebg"
+    android:padding="4dip"
     >
 	
 	<TextView  
@@ -46,6 +47,7 @@
     />
     
    <EditText
+        android:id="@+id/other"
     	android:layout_width="fill_parent" 
     	android:layout_height="wrap_content" 
     	android:text="Other.."

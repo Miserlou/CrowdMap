@@ -7,6 +7,7 @@ import android.view.Window;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
@@ -17,6 +18,10 @@ public class CMConfigActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
+        
+        final EditText et = (EditText) findViewById(R.id.other);
+        et.setEnabled(false);
+        et.setVisibility(4);
         
         Spinner s = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(
@@ -34,6 +39,15 @@ public class CMConfigActivity extends Activity {
 			public void onItemSelected(AdapterView<?> arg0, View arg1,
 					int arg2, long arg3) {
 				// If it's "Other", enable the Other EditView
+				if(arg2 == 8){
+					et.setEnabled(true);
+					et.setVisibility(0);
+				}
+				else{
+					et.setEnabled(false);
+					et.setVisibility(4);
+				}
+				
 			}
 
         });
