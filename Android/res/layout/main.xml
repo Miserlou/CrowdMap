@@ -4,18 +4,28 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/bluebg"
-    android:padding="4dip"
     >
 	
-	<TextView  
-	    android:id="@+id/title"
+   	<TextView  
+   		android:id="@+id/title_bar"
 	    android:layout_width="fill_parent" 
-	    android:layout_height="wrap_content"
-	    android:textAppearance="?android:attr/textAppearanceLarge"
-	    android:gravity="center"
+	    android:layout_height="wrap_content" 
 	    android:text="CrowdMap"
-	    android:padding="3dip"
-    />
+        android:gravity="center"
+        android:ellipsize="marquee"
+		android:textStyle="bold"
+		android:textColor="#ffffff"
+		android:textAppearance="?android:attr/textAppearanceMedium"
+		android:padding="5dip"
+		android:background="@drawable/header"
+	    />
+
+<LinearLayout 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="4dip"
+    >
     
 	<TextView  
 	    android:id="@+id/desc"
@@ -60,4 +70,6 @@
     	android:text="Begin mapping!"
     ></Button>
     
+</LinearLayout>
+
 </LinearLayout>

@@ -15,14 +15,15 @@ public final class R {
     }
     public static final class drawable {
         public static final int bluebg=0x7f020000;
-        public static final int icon=0x7f020001;
+        public static final int header=0x7f020001;
+        public static final int icon=0x7f020002;
     }
     public static final class id {
         public static final int carrier=0x7f060002;
         public static final int desc=0x7f060001;
         public static final int other=0x7f060004;
         public static final int spinner=0x7f060003;
-        public static final int title=0x7f060000;
+        public static final int title_bar=0x7f060000;
     }
     public static final class layout {
         public static final int main=0x7f030000;
