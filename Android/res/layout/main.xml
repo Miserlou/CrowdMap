@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bluebg"
+    >
+	
+	<TextView  
+	    android:id="@+id/title"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:textAppearance="?android:attr/textAppearanceLarge"
+	    android:gravity="center"
+	    android:text="CrowdMap"
+	    android:padding="3dip"
+    />
+    
+	<TextView  
+	    android:id="@+id/desc"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:gravity="center"
+	    android:textColor="#ffffff"
+	    android:text="\nCrowdMap is a project to geospatially map the IP address space of all the major telecommunications companies to investigate their coverage claims and to find out how our privacy is affected by our mobile browsing habits. Every few hours, CrowdMap will send some information about your connection and your location back to a central server, which will then be used to create a map and and open database of telco connection data."
+	    android:padding="3dip"
+    />
+    
+    <TextView  
+	    android:id="@+id/carrier"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:textAppearance="?android:attr/textAppearanceSmall"
+	    android:text="\nWho is your carrier?"
+	    android:textColor="#ffffff"
+	    android:padding="3dip"
+    />
+    
+    <Spinner 
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"
+        android:prompt="@string/carrier_prompt"
+    />
+    
+   <EditText
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="Other.."
+    	android:enabled="false"
+    ></EditText>
+    
+    <Button
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="Begin mapping!"
+    ></Button>
+    
+</LinearLayout>

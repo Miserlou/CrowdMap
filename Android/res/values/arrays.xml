@@ -1,0 +1,15 @@
+<resources>
+
+    <string-array name="carriers">
+        <item>ATT</item>
+        <item>T-Mobile</item>
+        <item>Verizon</item>
+        <item>Sprint</item>
+        <item>Rogers</item>
+        <item>NTT DoCoMo</item>
+        <item>China Mobile</item>
+        <item>Vodaphone</item>
+        <item>Other</item>
+    </string-array>
+    
+</resources>
