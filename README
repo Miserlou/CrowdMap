@@ -10,7 +10,7 @@ how international telcos distribute their IP address space geospacially.
 More info: rich@anomos.info
 
 SQLite Table Layout:
-ip, connection_type, carrier, location, location_type, time
+ip, connection_type, carrier, location, location_type, time, unique_id
 CREATE  TABLE "main"."points" ("ip" TEXT NOT NULL , "connection_type" TEXT NOT NULL , "carrier" TEXT NOT NULL , "location" TEXT NOT NULL , "location_type" TEXT NOT NULL , "time" TEXT NOT NULL , "unique_id" TEXT NOT NULL)
 
 Tuts used:
