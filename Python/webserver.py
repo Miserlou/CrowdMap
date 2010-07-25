@@ -36,11 +36,11 @@ class MyHandler(BaseHTTPRequestHandler):
 
             self.conn = sqlite3.connect('crowdmap.sqlite')
             c = self.conn.cursor()
-            query = "insert into points values (?,?,?,?,?,?,?)"
+            query = "insert into points values (?,?,?,?,?,?,?,?)"
 
             c.execute(query, (point['ip'], point['connection_type'], point['carrier'],
-                point['location'], point['location_type'], point['time'],
-                point['unique_id']))
+                point['latitude'], point['longitude'], point['location_type'],
+                point['time'], point['unique_id']))
 
             self.conn.commit()
             c.close()
