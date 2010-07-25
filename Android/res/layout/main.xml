@@ -60,7 +60,7 @@
         android:id="@+id/other"
     	android:layout_width="fill_parent" 
     	android:layout_height="wrap_content" 
-    	android:text="Other.."
+    	android:text="Please type your carrier's name"
     	android:enabled="false"
     ></EditText>
     
