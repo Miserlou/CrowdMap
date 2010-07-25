@@ -65,6 +65,7 @@
     ></EditText>
     
     <Button
+    	android:id="@+id/thebutton"
     	android:layout_width="fill_parent" 
     	android:layout_height="wrap_content" 
     	android:text="Begin mapping!"

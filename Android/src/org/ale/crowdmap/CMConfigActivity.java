@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.view.View.OnClickListener;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -51,8 +53,18 @@ public class CMConfigActivity extends Activity {
 			}
 
         });
-
-
+        
+        Button b = (Button)findViewById(R.id.thebutton);
+        b.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				//Do the stuff
+				
+				
+			}
+        	
+        });
         
     }
 }

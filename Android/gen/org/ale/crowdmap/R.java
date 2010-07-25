@@ -23,6 +23,7 @@ public final class R {
         public static final int desc=0x7f060001;
         public static final int other=0x7f060004;
         public static final int spinner=0x7f060003;
+        public static final int thebutton=0x7f060005;
         public static final int title_bar=0x7f060000;
     }
     public static final class layout {
