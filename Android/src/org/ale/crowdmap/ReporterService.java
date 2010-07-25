@@ -4,8 +4,10 @@ import org.ale.crowdmap.MyLocation.LocationResult;
 
 import android.app.Service;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.location.Location;
 import android.os.IBinder;
+import android.preference.PreferenceManager;
 
 public class ReporterService extends Service {
 	
@@ -25,6 +27,14 @@ public class ReporterService extends Service {
 	    	double lon = location.getLongitude();
 	    	String prov = location.getProvider();
 	    	
+			SharedPreferences prefs;
+			final SharedPreferences.Editor editor;
+			prefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+			editor = prefs.edit();
+			String unique = prefs.getString("unique", "");
+			String carrier = prefs.getString("carrier", "");
+			
+			
 	        }
 	    };
 
